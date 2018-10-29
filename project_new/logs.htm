@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Entry Log</h1>
+{% for serialn in people %}
+{% if serialn.type=="in" %}
+<p style="color:green">{{ serialn.id }}   {{ serialn.time }}</p>
+{% else %}
+<p style="color:red">
+{{ serialn.id }}      {{ serialn.time }}
+</p>
+{% endif %}
+{% endfor %}
+</body>
+</html>
